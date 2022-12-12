@@ -3,14 +3,17 @@ let url = "http://localhost:3000/films"
 document.addEventListener('DOMContentLoaded', () => {
 
     const FilmRow = document.getElementById('random-film')
+    const homeLink = document.getElementById('home-link')
 
-
-
+    homeLink.addEventListener('click', () => {
+        // hide categories, search and countries
+        FilmRow.style.display = "flex"
+    })
 
     const createFilm = (poster, title, runtime, showtime) => {
 
         const cardDiv = document.createElement('div')
-        cardDiv.classList.add('card', 'col-12', 'px-0', 'mb-5')
+        cardDiv.classList.add('card', 'col-10', 'px-2', 'mb-5')
         cardDiv.setAttribute('id', 'carddivv')
 
         const rowDiv = document.createElement('div')
@@ -156,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function getOneFilm(film) {
-            document.getElementById("title").textContent = film.title
+            document.getElementById("title").textContent = "Film Title : " + film.title
             document.getElementById("poster").src = film.poster
             document.getElementById("runtime").textContent = "Runtime: " + film.runtime + " Minutes"
             document.getElementById("showtime").textContent = "Showtime: " + film.showtime
