@@ -168,7 +168,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // tickets available would be film.capacity string minus film.tickets_sold
             let capacityConvert = parseInt(film.capacity, 10)
             ticketRem.textContent = "Remaining Tickets: " + (capacityConvert - film.tickets_sold)
-
+            
+         
+                    
+                }
+            
+                 
+           
             
 
             // let btn = document.getElementById("remaining")
@@ -184,8 +190,8 @@ document.addEventListener('DOMContentLoaded', () => {
             //     }
                
             // })
-        }
-
+        
+       
         
         const loadTitles = () => {
             fetch(url)
@@ -201,18 +207,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
   
-
-
+    // function buyTicket(){
+    //     let button = document.querySelector("button#buy-ticket")
+    //     button.addEventListener("click",function(){
+    //     let currentLi = document.querySelector("div#ticket-counter")
+    //     let number = parseInt(currentLi.textContent)
+    //     if(number >=1){
+    //         currentLi.textContent = currentLi.textContent -1}
+    //         else {document.querySelector("button#buy-ticket").textContent = "Sold Out"
+    //           alert("Sorry, No more tickets available!!")}
+    //       }
+    //       )
+    //       }
+    //       buyTicket()
+          
 
 
   
   
-// tickets available would be film.capacity string minus film.tickets_sold
 
    loadFilm()
   getFilm()
   loadTitles()
+//   buyTicket()
 //   getOneFilm()
 
 })
-
