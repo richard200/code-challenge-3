@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/films"
+let url = "https://richard200.github.io/code-challenge-3/database.json"
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(url)
         .then((res) => res.json())
         .then((data) => {
-            let filmData = data[0]
-            // console.log(filmData);
+            console.log(data.films);
+            let filmData = data.films[0]
             let title = "Film Title : " + filmData.title
             let poster = filmData.poster
             let runtime = "Runtime : " + filmData.runtime + " Minutes"
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fetch(url)
             .then(res => res.json())
             .then(data => {
-                data.forEach(film => {
+                data.films.forEach(film => {
                     // console.log(film);
                     displayAllFilms(film)
                     // getOneFilm(film)
@@ -193,11 +193,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
        
         
-        const loadTitles = () => {
+        let loadTitles = () => {
             fetch(url)
                 .then((response) => response.json())
                 .then((data) => {
-                    let titleNames = data
+                    let titleNames = data.films
                     let titleElems = titleNames.map(
                         filmss => displayAllFilms(filmss.title)
                     )
