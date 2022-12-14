@@ -28,7 +28,8 @@ In order for you to use the content on this repo ensure you have the following:
 
 ### Executing program
 
-* You can be able to run this app but opening it in the browser which will open the index.html file via the localhost that is being watched due to the command above to get the backend started.
+* You can be able to run this app but opening it in the browser using this link 
+* https://richard200.github.io/code-challenge-3/
 ```
 
 ```
